@@ -1,6 +1,9 @@
 <div> 
     <h1>Grupo 15</h1>
 </div>
+<div> 
+    <h1>Proyecto 1</h1>
+</div>
 <div>
   <h4>Integrantes</h4>
   <ul>
