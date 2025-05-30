@@ -61,6 +61,26 @@ Muchos creadores de contenido pierden horas revisando y cortando videos manualme
 
 ---
 
+## 👥 Historias de Usuarios
+Título: Dividir una clase larga en secciones temáticas
+
+Como docente que graba clases completas para mis estudiantes,
+quiero dividir fácilmente mis clases en capítulos temáticos,
+para que mis alumnos puedan repasar por partes sin ver el video completo cada vez.
+
+✅ Criterios de Aceptación
+ El docente puede subir un video largo de clase (3-5 hs.)
+
+ Se genera automáticamente la transcripción con bloques de texto y timstamps.
+
+ El docente puede marcar dónde empieza cada nuevo tema o capítulo con los timstamps que le da la aplicacion de ususario
+
+ Se generan clips individuales por cada sección marcada.
+
+ Cada clip puede tener un nombre sugerido como "Tema1_Introducción", "Tema2_Ejemplos", etc.
+
+ 
+
 ## 🧰 Tecnologías y Herramientas a Utilizar
 
 | Función                  | Herramienta                        |
