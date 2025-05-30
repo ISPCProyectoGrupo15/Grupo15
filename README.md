@@ -57,6 +57,7 @@ Muchos creadores de contenido pierden horas revisando y cortando videos manualme
 - Youtubers que suben entrevistas o cursos.
 - Docentes que graban clases largas y desean dividirlas por capítulos.
 - Periodistas que quieren segmentar sus notas o entrevistas.
+- Creadores de podcast en video o audio que quieren cortar su contenido en secciones sin tener que editar todo manual
 
 ---
 
