@@ -9,44 +9,48 @@
 
 ## 🎯 Descripción del Proyecto
 
-*TIMstamp* es una herramienta pensada para *creadores de contenido* como youtubers, docentes y periodistas que trabajan con videos largos (entrevistas, clases, podcasts, etc.) y necesitan *dividir su contenido en partes* según temas o secciones específicas.
+_TIMstamp_ es una herramienta pensada para _creadores de contenido_ como youtubers, docentes y periodistas que trabajan con videos largos (entrevistas, clases, podcasts, etc.) y necesitan _dividir su contenido en partes_ según temas o secciones específicas.
 
-Este proyecto permite automatizar la transcripción del video y facilita al usuario elegir *dónde cortar el video* en bloques según la estructura del contenido.
+Este proyecto permite automatizar la transcripción del video y facilita al usuario elegir _dónde cortar el video_ en bloques según la estructura del contenido.
 
 ---
 
 ## 🧠 ¿Qué problema resuelve?
 
-Muchos creadores de contenido pierden horas revisando y cortando videos manualmente para crear partes como: Introducción, Tema 1, Tema 2, Conclusión, etc. *TIMstamp* automatiza gran parte de ese proceso, permitiendo que el usuario simplemente elija los momentos clave y reciba los clips generados.
+Muchos creadores de contenido pierden horas revisando y cortando videos manualmente para crear partes como: Introducción, Tema 1, Tema 2, Conclusión, etc. _TIMstamp_ automatiza gran parte de ese proceso, permitiendo que el usuario simplemente elija los momentos clave y reciba los clips generados.
 
 ---
 
 ## ⚙ ¿Cómo funciona?
 
-1. *El usuario sube un video*
+1. _El usuario sube un video_
+
    - 🎥 Puede ser una clase, entrevista u otro material educativo.
    - El video se guarda en el servidor.
 
-2. *La app transcribe el video con Whisper*
+2. _La app transcribe el video con Whisper_
+
    - 🧠 Se genera la transcripción automática con timestamps (Whisper ya los genera por bloques).
    - Se muestra al usuario una lista de bloques con:
+
      - Texto parcial
      - Timestamp de inicio y fin  
-     Ejemplo:
-     
+       Ejemplo:
+
      00:00 → "Hola, bienvenidos al canal..."
      00:30 → "Hoy vamos a hablar sobre ansiedad..."
      01:00 → "La primera pregunta es..."
-     
 
-3. *El usuario elige los timestamps clave*
+3. _El usuario elige los timestamps clave_
+
    - 🖱 Puede seleccionarlos desde la transcripción usando checkboxes, inputs o clics.
    - Ejemplo: [00:00, 00:30, 01:00, 02:15]
 
-4. *La app corta el video automáticamente*
-   - ✂ Con herramientas como *ffmpeg*, se fragmenta el video según los timestamps seleccionados.
+4. _La app corta el video automáticamente_
 
-5. *Se entregan los clips al usuario*
+   - ✂ Con herramientas como _ffmpeg_, se fragmenta el video según los timestamps seleccionados.
+
+5. _Se entregan los clips al usuario_
    - 📁 Cada clip se puede descargar individualmente.
    - Los nombres pueden sugerirse automáticamente: Tema1_Introduccion.mp4, Tema2_Ansiedad.mp4, etc.
 
@@ -61,30 +65,49 @@ Muchos creadores de contenido pierden horas revisando y cortando videos manualme
 
 ---
 
-## 👥 Historias de Usuarios
+## 👥 Historias de Usuarios - TIMstamp para Docentes
+
 Título: Dividir una clase larga en secciones temáticas
 
-Como docente que graba clases completas para mis estudiantes,
-quiero dividir fácilmente mis clases en capítulos temáticos,
-para que mis alumnos puedan repasar por partes sin ver el video completo cada vez.
+**Como** docente que graba clases completas para mis estudiantes,
+**quiero** dividir fácilmente mis clases en capítulos temáticos,
+**para** que mis alumnos puedan repasar por partes sin ver el video completo cada vez.
 
 ✅ Criterios de Aceptación
- El docente puede subir un video largo de clase (3-5 hs.)
+El docente puede subir un video largo de clase (3-5 hs.)
 
- Se genera automáticamente la transcripción con bloques de texto y timstamps.
+Se genera automáticamente la transcripción con bloques de texto y timstamps.
 
- El docente puede marcar dónde empieza cada nuevo tema o capítulo con los timstamps que le da la aplicacion de ususario
+El docente puede marcar dónde empieza cada nuevo tema o capítulo con los timstamps que le da la aplicacion de ususario
 
- Se generan clips individuales por cada sección marcada.
+Se generan clips individuales por cada sección marcada.
 
- Cada clip puede tener un nombre sugerido como "Tema1_Introducción", "Tema2_Ejemplos", etc.
+Cada clip puede tener un nombre sugerido como "Tema1_Introducción", "Tema2_Ejemplos", etc.
 
- 
+## 👥 Historia de Usuario - TIMstamp para YouTuber
+
+**Como** YouTuber que subo entrevistas, podcasts y videos educativos de larga duración
+**Quie**ro generar automáticamente capítulos con timestamps para mis videos
+**Para** que mis suscriptores puedan saltar directamente a los temas que más les interesan, aumentar mi tiempo de visualización y mejorar el posicionamiento de mis videos en YouTube.
+
+✅ Criterios de aceptación:
+
+Puedo subir mi video grabado (MP4, MOV) o pegar el enlace de YouTube de un video ya publicado
+El sistema identifica automáticamente los diferentes temas o secciones de mi contenido
+Recibo una lista de capítulos sugeridos con:
+
+Timestamp exacto (ej: 00:03:45)
+Título descriptivo del tema (ej: "Consejos para principiantes")
+Breve descripción opcional
+
+Puedo personalizar los títulos y ajustar los tiempos antes de confirmar
+Los capítulos se exportan en el formato exacto que necesito para la descripción de YouTube
+Funciona con videos de 20 minutos a 3 horas de duración
 
 ## 🧰 Tecnologías y Herramientas a Utilizar
 
-| Función                  | Herramienta                        |
-|--------------------------|------------------------------------|
+| Función                  | Herramienta                       |
+| ------------------------ | --------------------------------- |
 | Transcripción            | OpenAI Whisper API o modelo local |
 | Backend                  | Python (Flask o FastAPI)          |
 | Procesamiento de video   | FFmpeg                            |
@@ -97,7 +120,8 @@ para que mis alumnos puedan repasar por partes sin ver el video completo cada ve
 
 ## 🚀 Estado Actual
 
-Estamos trabajando en el *Sprint 0*, que incluye:
+Estamos trabajando en el _Sprint 0_, que incluye:
+
 - Definición y documentación del proyecto (README)
 - Organización del equipo en GitHub
 - Creación del Project Board y asignación de tareas iniciales
@@ -118,5 +142,5 @@ Estamos trabajando en el *Sprint 0*, que incluye:
 </div>
 
 ## 📁 Estructura Tentativa del Repositori
-</div>
 
+</div>
